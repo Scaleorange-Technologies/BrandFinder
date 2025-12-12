@@ -4,12 +4,12 @@ A comprehensive brand discovery and relationship mapping system that combines  *
 
 ##  Features
 
-- ** Image Recognition**: Upload product images to automatically detect brands using OCR and AI
-- ** Intelligent Search**: Fuzzy search across products, brands, companies, endorsers, directors, and shareholders
-- ** Relationship Mapping**: Visualize complex relationships between entities using Neo4j graph database
-- ** Fast Search**: Elasticsearch integration for lightning-fast fuzzy matching
-- ** Interactive UI**: Beautiful React-based frontend with graph visualizations
-- ** AI-Powered**: Uses Google Gemini AI for brand detection and correction
+- Image Recognition: Upload product images to automatically detect brands using OCR and AI
+- Intelligent Search: Fuzzy search across products, brands, companies, endorsers, directors, and shareholders
+- Relationship Mapping: Visualize complex relationships between entities using Neo4j graph database
+- Fast Search: Elasticsearch integration for lightning-fast fuzzy matching
+- Interactive UI: Beautiful React-based frontend with graph visualizations
+- AI-Powered: Uses Google Gemini AI for brand detection and correction
 
 ##  Architecture
 
