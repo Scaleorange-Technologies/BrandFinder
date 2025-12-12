@@ -1,17 +1,17 @@
-# BrandFinder 🔍
+# BrandFinder 
 
 A comprehensive brand discovery and relationship mapping system that combines  **graph database**, and **fuzzy search** capabilities to identify products, brands, companies, endorsers, directors, and shareholders from product images.
 
-## 🌟 Features
+##  Features
 
-- **🖼️ Image Recognition**: Upload product images to automatically detect brands using OCR and AI
-- **🔍 Intelligent Search**: Fuzzy search across products, brands, companies, endorsers, directors, and shareholders
-- **📊 Relationship Mapping**: Visualize complex relationships between entities using Neo4j graph database
-- **⚡ Fast Search**: Elasticsearch integration for lightning-fast fuzzy matching
-- **🎨 Interactive UI**: Beautiful React-based frontend with graph visualizations
-- **🤖 AI-Powered**: Uses Google Gemini AI for brand detection and correction
+- ** Image Recognition**: Upload product images to automatically detect brands using OCR and AI
+- ** Intelligent Search**: Fuzzy search across products, brands, companies, endorsers, directors, and shareholders
+- ** Relationship Mapping**: Visualize complex relationships between entities using Neo4j graph database
+- ** Fast Search**: Elasticsearch integration for lightning-fast fuzzy matching
+- ** Interactive UI**: Beautiful React-based frontend with graph visualizations
+- ** AI-Powered**: Uses Google Gemini AI for brand detection and correction
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Tech Stack
 
@@ -50,7 +50,7 @@ BrandFinder/
 └── README.md
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -237,7 +237,7 @@ curl -u elastic:'9Kap8pGV+8vJI+V1LJ4t' --insecure -X POST "https://localhost:920
 
 **Note:** Replace the Elasticsearch password (`9Kap8pGV+8vJI+V1LJ4t`) with your actual password.
 
-## 🎯 Running the Application
+##  Running the Application
 
 ### Start Backend Server
 
@@ -257,7 +257,7 @@ npm start
 
 The frontend will run on `http://localhost:3000`
 
-## 📡 API Endpoints
+##  API Endpoints
 
 ### Image Analysis
 - `POST /api/analyze-image` - Upload and analyze product image
@@ -272,7 +272,7 @@ The frontend will run on `http://localhost:3000`
 
 All search endpoints support fuzzy matching for typo-tolerant searches.
 
-## 🔧 Configuration
+##  Configuration
 
 ### Backend Configuration
 
@@ -310,7 +310,7 @@ Update the API base URL in `frontend/src/App.js` if needed:
 const API_BASE_URL = 'http://localhost:7000';
 ```
 
-## 🎨 Features in Detail
+##  Features in Detail
 
 ### Image Recognition Pipeline
 
