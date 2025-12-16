@@ -7,23 +7,16 @@ const path = require('path');
 const fs = require('fs');
 const { Client } = require('@elastic/elasticsearch');
 
-
-
 const esClient = new Client({
-  node: 'https://localhost:9200', // adjust if using cloud or proxy
-  auth: {
-    username: 'elastic',
-    password: '9Kap8pGV+8vJI+V1LJ4t'
-  },
+  node: 'http://164.52.213.200:9200',  
   tls: {
-    rejectUnauthorized: false // since you're using --insecure
+    rejectUnauthorized: false 
   }
 });
 
 
 const app = express();
-const port = 7000;
-
+const port = 3013;
 
 app.use(cors({
   origin: '*' ,
@@ -64,8 +57,8 @@ const upload = multer({
 });
 
 const driver = neo4j.driver(
-  'bolt://localhost:7687',
-  neo4j.auth.basic('neo4j', '12345678')
+  'bolt://164.52.213.200:7687',
+  neo4j.auth.basic('neo4j', 'neo4j2025')
 );
 
 
@@ -655,8 +648,8 @@ app.post('/api/analyze-image', upload.single('image'), async (req, res) => {
 app.get('/api/search/product/:name', async (req, res) => {
   let session;
   try {
-      // session = driver.session();
-    session = driver.session({ database: 'products' });
+      session = driver.session();
+    // session = driver.session({ database: 'products' });
 
   } catch (error) {
     session = driver.session();
@@ -666,6 +659,7 @@ app.get('/api/search/product/:name', async (req, res) => {
 
   try {
     // 🔍 Step 1: Fuzzy search in Elasticsearch
+    console.log("name", name)
     const matchedNames = await fuzzySearchProductNames(name);
     console.log("matchedNames", matchedNames)
 
@@ -699,8 +693,8 @@ app.get('/api/search/product/:name', async (req, res) => {
 
 
 app.get('/api/search/brand/:name', async (req, res) => {
-  const session = driver.session({ database: 'products' });
-  // const session=driver.session();
+  // const session = driver.session({ database: 'products' });
+  const session=driver.session();
 
 
   const name = req.params.name;
@@ -737,8 +731,8 @@ app.get('/api/search/brand/:name', async (req, res) => {
 app.get('/api/search/company/:name', async (req, res) => {
   let session;
   try {
-      // session = driver.session();
-    session = driver.session({ database: 'products' });
+      session = driver.session();
+    // session = driver.session({ database: 'products' });
 
   } catch (error) {
     session = driver.session();
@@ -786,9 +780,9 @@ app.get('/api/search/endorser/:name', async (req, res) => {
   let session;
 
   try {
-    // session = driver.session();
+    session = driver.session();
 
-    session = driver.session({ database: 'products' });
+    // session = driver.session({ database: 'products' });
   } catch (err) {
     session = driver.session(); // fallback
   }
@@ -823,8 +817,8 @@ app.get('/api/search/endorser/:name', async (req, res) => {
 
 
 app.get('/api/search/director/:name', async (req, res) => {
-  const session = driver.session({ database: 'products' });
-  // const session=driver.session();
+  // const session = driver.session({ database: 'products' });
+  const session=driver.session();
 
   const name = req.params.name;
   console.log("name", name);
@@ -864,9 +858,9 @@ app.get('/api/search/shareholder/:name', async (req, res) => {
   let session;
 
   try {
-    // session = driver.session();
+    session = driver.session();
 
-    session = driver.session({ database: 'products' });
+    // session = driver.session({ database: 'products' });
   } catch (err) {
     session = driver.session(); // fallback
   }

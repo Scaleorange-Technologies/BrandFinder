@@ -3,9 +3,9 @@ import os
 from google.generativeai import configure, GenerativeModel
 
 # ─── Configuration ─────────────────────────────────────────────────────────────
-GEMINI_API_KEY = "AIzaSyBG13lOKsIC7TqQwA4EfdisL3Sh-w-loWE"
+GEMINI_API_KEY = "AIzaSyAoUqbb1Pt0KthdQkyzZ6duOMgZ9Vysh3I"
 configure(api_key=GEMINI_API_KEY)
-gemini = GenerativeModel("models/gemini-1.5-flash-latest")
+gemini = GenerativeModel("models/gemini-2.5-flash")
 
 reader = easyocr.Reader(['en'])
 
@@ -121,9 +121,9 @@ import os
 from google.generativeai import configure, GenerativeModel
 
 # ─── Configuration ─────────────────────────────────────────────────────────────
-GEMINI_API_KEY = "AIzaSyBG13lOKsIC7TqQwA4EfdisL3Sh-w-loWE"
+GEMINI_API_KEY = "AIzaSyAoUqbb1Pt0KthdQkyzZ6duOMgZ9Vysh3I"
 configure(api_key=GEMINI_API_KEY)
-gemini = GenerativeModel("models/gemini-1.5-flash-latest")
+gemini = GenerativeModel("models/gemini-2.5-flash")
 
 reader = easyocr.Reader(['en'])
 
